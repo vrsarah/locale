@@ -23,7 +23,7 @@ Here are some other European characters that might cause problems:
 
 ## Code with Euro Symbol
 
-```r
+```{r}
 price <- "€10.50"
 print(paste("The price is", price))
 ```
