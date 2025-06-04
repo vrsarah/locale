@@ -7,23 +7,13 @@ format:
 engine: knitr
 ---
 
-## Euro Symbol Test
-
-The euro symbol is €. It should display properly.
-
-## Other European Characters
-
-Here are some other European characters that might cause problems:
-
-- Swedish: åäö ÅÄÖ
-- German: äöüß ÄÖÜ
-- French: éèêëç ÉÈÊËÇ
-- Spanish: áéíóúñ¿¡ ÁÉÍÓÚÑ
-- Polish: ąćęłńóśźż ĄĆĘŁŃÓŚŹŻ
-
-## Code with Euro Symbol
+## Locale Test
 
 ```{r}
+Sys.setlocale("LC_MESSAGES", 'en_US.UTF-8')
+cat("Current locale:", Sys.getlocale(), "\n")
 price <- "€10.50"
 print(paste("The price is", price))
+french <- "éèêëç"
+print(paste("French characters:", french))
 ```
