@@ -25,7 +25,16 @@ Here are some other European characters that might cause problems:
 ```{r}
 price <- "€10.50"
 print(paste("The price is", price))
-system("locale -a")
+tryCatch({
+  Sys.setlocale("LC_ALL", "C.UTF-8")  # Often available on Linux
+}, warning = function(w) {
+  # Try alternatives if the first attempt fails
+  for (loc in c("en_US.UTF-8", "UTF-8", "POSIX")) {
+    result <- suppressWarnings(try(Sys.setlocale("LC_ALL", loc), silent = TRUE))
+    if (!inherits(result, "try-error")) break
+  }
+})
+system('locale -a | grep -i "utf\|en_"')
 Sys.setlocale("LC_ALL", "en_US.UTF-8")
 cat("Current locale:", Sys.getlocale(), "\n")
 ```
