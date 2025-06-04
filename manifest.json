@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "locale": "en_US",
+  "locale": "en_US.UTF-8",
   "platform": "4.4.3",
   "metadata": {
     "appmode": "quarto-static",
