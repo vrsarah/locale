@@ -25,3 +25,4 @@ Here are some other European characters that might cause problems:
 ```{r}
 price <- "€10.50"
 print(paste("The price is", price))
+```
