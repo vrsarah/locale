@@ -25,5 +25,6 @@ Here are some other European characters that might cause problems:
 ```{r}
 price <- "€10.50"
 print(paste("The price is", price))
+Sys.setlocale("LC_ALL", "en_US.UTF-8")
 cat("Current locale:", Sys.getlocale(), "\n")
 ```
