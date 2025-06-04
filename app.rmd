@@ -1,0 +1,27 @@
+---
+title: "European Characters Test"
+output: 
+  html_document:
+    toc: true
+    self_contained: true
+---
+
+## Euro Symbol Test
+
+The euro symbol is €. It should display properly.
+
+## Other European Characters
+
+Here are some other European characters that might cause problems:
+
+- Swedish: åäö ÅÄÖ
+- German: äöüß ÄÖÜ
+- French: éèêëç ÉÈÊËÇ
+- Spanish: áéíóúñ¿¡ ÁÉÍÓÚÑ
+- Polish: ąćęłńóśźż ĄĆĘŁŃÓŚŹŻ
+
+## Code with Euro Symbol
+
+```{r}
+price <- "€10.50"
+print(paste("The price is", price))
