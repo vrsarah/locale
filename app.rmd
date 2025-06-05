@@ -9,7 +9,6 @@ output:
 ## Locale Test
 
 ```{r}
-Sys.setlocale("LC_MESSAGES", 'en_US.UTF-8')
 cat("Current locale:", Sys.getlocale(), "\n")
 price <- "€10.50"
 print(paste("The price is", price))
